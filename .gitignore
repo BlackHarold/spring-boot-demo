@@ -1,0 +1,12 @@
+
+.idea
+.mvn
+gradle
+target
+.gitignore
+build.gradle
+gradlew
+gradlew.bat
+manifest.yml
+settings.gradle
+.gitignore
