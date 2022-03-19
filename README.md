@@ -1,1 +1,1 @@
-spring-boot demo app for gazprom-neft initial
+spring-boot demo app
