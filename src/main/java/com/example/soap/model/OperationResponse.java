@@ -4,8 +4,8 @@ public class OperationResponse {
 
     private Integer resultNumber;
 
-    public OperationResponse(int add) {
-
+    public OperationResponse(Integer resultNumber) {
+        this.resultNumber = resultNumber;
     }
 
     public Integer getResultNumber() {

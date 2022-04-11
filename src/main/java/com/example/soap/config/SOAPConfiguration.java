@@ -21,7 +21,7 @@ public class SOAPConfiguration {
     @Bean
     public CalculatorSOAPClient calculatorSOAPClient(Jaxb2Marshaller marshaller) {
         CalculatorSOAPClient client = new CalculatorSOAPClient();
-        client.setDefaultUri("http://localhost:8080/ws");
+//        client.setDefaultUri("http://www.dneonline.com/calculator.asmx");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;

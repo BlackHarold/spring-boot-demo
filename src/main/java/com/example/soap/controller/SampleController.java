@@ -35,13 +35,13 @@ public class SampleController {
 
     @PostMapping(path = "/add", produces = "application/json")
     public OperationResponse addNumbers(@RequestBody @Valid OperationRequest request, BindingResult bindingResult) {
-        System.out.println("/add");
-        if (bindingResult.hasErrors())
+        if (bindingResult.hasErrors()) {
             throw new RequestValueException(
                     mapper.objectErrorsToValidationErrors(
                             bindingResult.getAllErrors()
                     )
             );
+        }
 
         return new OperationResponse(
                 calcService.add(
@@ -53,7 +53,6 @@ public class SampleController {
 
     @PostMapping(path = "/divide", produces = "application/json")
     public OperationResponse divideNumbers(@RequestBody @Valid OperationRequest request, BindingResult bindingResult) {
-        System.out.println("/divide");
         if (bindingResult.hasErrors())
             throw new RequestValueException(
                     mapper.objectErrorsToValidationErrors(
@@ -71,7 +70,6 @@ public class SampleController {
 
     @PostMapping(path = "/multiply", produces = "application/json")
     public OperationResponse multiplyNumbers(@RequestBody @Valid OperationRequest request, BindingResult bindingResult) {
-        System.out.println("/multiply");
         if (bindingResult.hasErrors())
             throw new RequestValueException(
                     mapper.objectErrorsToValidationErrors(
@@ -89,7 +87,6 @@ public class SampleController {
 
     @PostMapping(path = "/subtract", produces = "application/json")
     public OperationResponse subtractNumbers(@RequestBody @Valid OperationRequest request, BindingResult bindingResult) {
-        System.out.println("/substract");
         if (bindingResult.hasErrors())
             throw new RequestValueException(
                     mapper.objectErrorsToValidationErrors(

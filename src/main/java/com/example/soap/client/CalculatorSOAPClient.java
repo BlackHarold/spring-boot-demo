@@ -6,10 +6,10 @@ import org.springframework.ws.soap.client.core.SoapActionCallback;
 
 public class CalculatorSOAPClient extends WebServiceGatewaySupport {
     private final static String URI = "http://www.dneonline.com/calculator.asmx";
-    private final static String HTTP_TEMP_URI_ORG_ADD = "add";
-    private final static String HTTP_TEMP_URI_ORG_DIVIDE = "divide";
-    private final static String HTTP_TEMP_URI_ORG_MULTIPLY = "multiply";
-    private final static String HTTP_TEMP_URI_ORG_SUBTRACT = "subtract";
+    private final static String HTTP_TEMP_URI_ORG_ADD = "http://tempuri.org/Add";
+    private final static String HTTP_TEMP_URI_ORG_DIVIDE = "http://tempuri.org/Divide";
+    private final static String HTTP_TEMP_URI_ORG_MULTIPLY = "http://tempuri.org/Multiply";
+    private final static String HTTP_TEMP_URI_ORG_SUBTRACT = "http://tempuri.org/Subtract";
 
     public AddResponse add(Add addRequest) {
         return (AddResponse) getWebServiceTemplate()
@@ -46,5 +46,4 @@ public class CalculatorSOAPClient extends WebServiceGatewaySupport {
                         new SoapActionCallback(HTTP_TEMP_URI_ORG_SUBTRACT)
                 );
     }
-
 }
