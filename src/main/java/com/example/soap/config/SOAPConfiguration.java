@@ -14,7 +14,7 @@ public class SOAPConfiguration {
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setContextPath(WSDL_PATH);
-        System.out.println("ctx path: " + marshaller.getContextPath());
+
         return marshaller;
     }
 
@@ -24,6 +24,7 @@ public class SOAPConfiguration {
 //        client.setDefaultUri("http://www.dneonline.com/calculator.asmx");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
+
         return client;
     }
 }
